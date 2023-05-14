@@ -1,0 +1,26 @@
+ <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                    <ItemTemplate>
+                    
+                    <br/>
+                    <img src="../Styles/Images/AvatarBoy.png" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                        style="width: 60px">
+                    <asp:Label ID="lblDateTime" runat="server" CssClass="w3-right w3-opacity" Text='<%#Eval("Dated") %>'></asp:Label>
+                    <asp:Label ID="lblUsername" runat="server" Text='<%#Eval("fkRegNo") %>'></asp:Label>
+                    <br/>
+                    <hr class="w3-clear">
+                     <asp:Label ID="lblPostText" runat="server" Text='<%#Eval("PostText") %>'></asp:Label>
+                    <asp:Image ID="imgPost" runat="server" CssClass="w3-margin-bottom" Width="100%" Text='<%#Eval("PostContentURL") %>' />
+                    <br />
+                    <asp:Button ID="btnLike" runat="server" Text="LIKE" CssClass="w3-button w3-theme-d1 w3-margin-bottom" />
+                    <asp:Button ID="btnComment" runat="server" Text="COMMENT" CssClass="w3-button w3-theme-d1 w3-margin-bottom" />
+                    </ItemTemplate>
+                    
+                    </asp:Repeater>
+                    
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\SSFdb.mdf;Integrated Security=True;User Instance=True" 
+                        ProviderName="System.Data.SqlClient" 
+                        SelectCommand="SELECT [PostText], [PostContentURL], [Dated], [fkRegNo] FROM [tblPosts]">
+                    </asp:SqlDataSource>
+                    
+               

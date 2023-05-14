@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SSF|Admin</title>
+    <link rel="stylesheet" type="text/css" href="Styles/SSFStyleSheet1.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/StyleSheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <a href="../Public/Default.aspx">Home</a>
+            <a href="../Admin/Admin.aspx">Home|Admin</a>
+            <a href="../Admin/AddUsers.aspx">Add Users</a>
+            <a href="../Admin/Update.aspx">Update Users</a>
+            <a href="../Admin/ViewMessages.aspx">Messages</a>
+            <asp:LinkButton ID="btnLogOut" runat="server" CssClass="pull-right" ForeColor="Red" 
+                onclick="btnLogOut_Click" Height="58px">Log Out</asp:LinkButton>
+           
+            </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+      <div class="footer">
+     
+  <table style="width: 100%;text-align:center;">
+    <tr>
+        <td>Powered by: 
+            <br /> Wasim Akram</td>
+        <td>Contact Us @ 
+            <br /><a href="https://www.facebook.com/Saim516" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/Wasi_516" class="fa fa-twitter"> </a>
+            <a href="mailto:mr.saim516@gmail.com" class="fa fa-google"></a></td>
+        <td>&copy;Copyright 2019. <br>All Rights Reserved.</td>
+    </tr>
+    </table>
+</div>
+    </form>
+</body>
+</html>

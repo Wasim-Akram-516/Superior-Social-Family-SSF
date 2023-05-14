@@ -1,0 +1,8 @@
+ con.Open();
+        SqlCommand com = con.CreateCommand();
+        com.CommandType = CommandType.Text;
+        com.CommandText = "insert into tblProfiles(fkRegNo,UserName,Password,RePassword) values('" + txtRegNo.Text + "','" + txtUsername.Text + "','" + txtPassword.Text + "','" + txtRePassword.Text + "')";
+        com.ExecuteNonQuery();
+        Response.Write("<script>alert('Successfully Sign Up');</script>");
+        Response.Redirect("~/Public/Login.aspx");
+        con.Close();
